@@ -1,6 +1,7 @@
 package restaurant.dto.requestdto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
 public class RestaurantRequestDto {
 	@NotBlank(message="Restuarant name should not be null")
@@ -9,6 +10,7 @@ public class RestaurantRequestDto {
 	 private String location;
 	 private Double rating;
 	 @NotBlank(message="Contact number required")
+	 @Pattern(regexp = "[0-9]{10}", message = "Contact number must be 10 digits")
 	 private String contactNumber;
 	 
 	 //getters and setters
