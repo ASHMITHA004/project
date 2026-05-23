@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 public class RestaurantResponseDto {
 	
     @NotNull(message="Restaurant id shoule not be null")
-	private Long restaurantid;
+	private Integer restaurantid;
     @NotBlank(message="Restaurant name should not be blank")
 	private String restaurantname;
     @NotBlank(message="Choose the restaurant location")
@@ -14,10 +14,10 @@ public class RestaurantResponseDto {
 	private Double rating;
 	@NotBlank(message="contact number required")
 	private String contactNumber;
-	public Long getRestaurantid() {
+	public Integer getRestaurantid() {
 		return restaurantid;
 	}
-	public void setRestaurantid(Long restaurantid) {
+	public void setRestaurantid(Integer restaurantid) {
 		this.restaurantid = restaurantid;
 	}
 	public String getRestaurantname() {
