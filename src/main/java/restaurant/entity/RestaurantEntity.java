@@ -9,7 +9,7 @@ import jakarta.persistence.OneToMany;
 @Entity
 public class RestaurantEntity {
 	@Id
-	private Long restaurantid;
+	private Integer restaurantid;
 	private String restaurantname;
 	private String location;
 	private Double rating;
@@ -19,14 +19,17 @@ public class RestaurantEntity {
 	private List<FoodItemEntity> foodItems;
 	
 	//getters and setters
-	public Long getId() {
-		return restaurantid;
-	}
-	public void setId(Long id) {
-		this.restaurantid = id;
-	}
+	
+	
+	
 	public String getRestaurantname() {
 		return restaurantname;
+	}
+	public Integer getRestaurantid() {
+		return restaurantid;
+	}
+	public void setRestaurantid(Integer restaurantid) {
+		this.restaurantid = restaurantid;
 	}
 	public void setRestaurantname(String restaurantname) {
 		this.restaurantname = restaurantname;

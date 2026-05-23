@@ -1,9 +1,12 @@
 package restaurant.dto.requestdto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
 public class RestaurantRequestDto {
+	@NotNull(message="Please enter the restaurant id")
+	private Integer restaurantid;
 	@NotBlank(message="Restuarant name should not be null")
 	 private String restaurantname;
 	@NotBlank(message="Location should not be Blank")
@@ -38,6 +41,13 @@ public class RestaurantRequestDto {
 	 public void setContactNumber(String contactNumber) {
 		 this.contactNumber = contactNumber;
 	 }
+	 public Integer getRestaurantid() {
+		 return restaurantid;
+	 }
+	 public void setRestaurantid(Integer restaurantid) {
+		 this.restaurantid = restaurantid;
+	 }
+	 
 	 
 	 
 
