@@ -9,7 +9,7 @@ import restaurant.entity.RestaurantEntity;
 public class FoodItemEntity {
 	
     @Id
-	private Long foodid;
+	private Integer foodid;
 	private String foodname;
 	private Double price;
 	private String category;
@@ -19,10 +19,10 @@ public class FoodItemEntity {
 	private RestaurantEntity restaurant;
 	
 	//getters and setters
-	public Long getFoodid() {
+	public Integer getFoodid() {
 		return foodid;
 	}
-	public void setFoodid(Long foodid) {
+	public void setFoodid(Integer foodid) {
 		this.foodid = foodid;
 	}
 	public String getFoodname() {

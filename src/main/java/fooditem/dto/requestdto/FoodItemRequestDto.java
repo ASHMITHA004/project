@@ -6,6 +6,9 @@ import jakarta.validation.constraints.Positive;
 
 public class FoodItemRequestDto {
 	
+	@NotNull(message="Food id is required")
+	private Integer foodid;
+	
 	@NotBlank(message = "Food item name should not be blank")
     private String foodname;
 
@@ -52,5 +55,22 @@ public class FoodItemRequestDto {
 	public void setAvailable(Boolean available) {
 		this.available = available;
 	}
+
+	public Integer getFoodid() {
+		return foodid;
+	}
+
+	public void setFoodid(Integer foodid) {
+		this.foodid = foodid;
+	}
+
+	public String getFoodname() {
+		return foodname;
+	}
+
+	public void setFoodname(String foodname) {
+		this.foodname = foodname;
+	}
+	
 
 }
