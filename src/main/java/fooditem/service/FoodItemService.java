@@ -13,15 +13,15 @@ public interface FoodItemService {
 	
 	FoodItemResponseDto getFoodbyid(Integer foodid);
 	
-	FoodItemResponseDto getFoodbyrestaurant(Integer foodid);
+	List<FoodItemResponseDto> getFoodbyrestaurant(Integer restaurantid);
 	
 	FoodItemResponseDto update(Integer foodid,FoodItemRequestDto request);
 	
 	String delete(Integer foodid);
 	
-	FoodItemResponseDto getfoodbycategory(String category);
+	List<FoodItemResponseDto> getfoodbycategory(String category);
 	
-	FoodItemResponseDto getfoodbyavailability(boolean available);
+	List<FoodItemResponseDto> getfoodbyavailability(Boolean available);
 	
 
 }
